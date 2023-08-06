@@ -1,0 +1,26 @@
+.propsals-image {
+    img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+.propsals-text {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    margin-left: 1rem;
+    h5 {
+        margin-top: unset;
+        margin-bottom: unset;
+    }
+}
+
+.added-friends-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
