@@ -10,8 +10,8 @@
                         <h5>Freunde:</h5>
                     </div>
                     <div class="friends-container">
-                        <div class="friend-added" *ngFor="let i of getArrayFriends()">
-                            <app-friendbox [profilePicture]="imgs[i]" [profileText]="name[i]"></app-friendbox>
+                        <div class="friend-added" *ngFor="let i of getArraynewFriends()">
+                            <app-friendbox [profilePicture]="fs.imgs[i]" [profileText]="fs.names[i]"></app-friendbox>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
         <div class="propsals-container">
             <app-profile-row></app-profile-row>
             <div class="friendsuggestion" *ngFor="let i of getArrayFriends()">
-                <app-proposals [profilePicture]="imgs[i]" [profileText]="name[i]"></app-proposals>
+                <app-proposals [profilePicture]="fs.imgs[i]" [profileText]="fs.names[i]"></app-proposals>
             </div>
 
         </div>

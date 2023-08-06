@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FriendService } from './friend.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(public fs: FriendService){}
+
   title = 'hamsterbook';
 
   postText= [
@@ -33,11 +37,7 @@ export class AppComponent {
 
   ]
 
-  name = ['Sven', 'Lars', 'Theo', 'Hans'];
-  imgs = ['assets/imgs/hamster/hamster3.jpg',
-  'assets/imgs/hamster/hamster4.jpg',
-  'assets/imgs/hamster/hamster5.jpg',
-  'assets/imgs/hamster/hamster6.jpg'];
+
 
   getArrayLength(): number[] {
     const maxLength = Math.max(this.postImage.length, this.postText.length);
@@ -45,7 +45,12 @@ export class AppComponent {
   }
 
   getArrayFriends(): number[] {
-    const maxLength = Math.max(this.name.length, this.imgs.length);
+    const maxLength = Math.max(this.fs.names.length, this.fs.imgs.length);
+    return Array.from({ length: maxLength }, (_, i) => i);
+  }
+
+  getArraynewFriends(): number[] {
+    const maxLength = Math.max(this.fs.newnames.length, this.fs.newimgs.length);
     return Array.from({ length: maxLength }, (_, i) => i);
   }
 }

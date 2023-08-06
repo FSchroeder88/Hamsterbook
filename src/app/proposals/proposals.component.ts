@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FriendService } from '../friend.service';
 
 @Component({
   selector: 'app-proposals',
@@ -10,5 +11,6 @@ export class ProposalsComponent {
   @Input() profileText: string= '';
   @Input() profilePicture: string= '';
 
+  constructor(public fs: FriendService){}
 
 }

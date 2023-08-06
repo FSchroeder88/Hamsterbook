@@ -3,6 +3,6 @@
         <img src="{{ profilePicture }}">
     </div>
     <div class="propsals-text">
-        <b>{{ profileText }}</b>
+        <a (click)="fs.addFriend(profileText, profilePicture)"><b>{{ profileText }}</b></a>
     </div>
 </div>
